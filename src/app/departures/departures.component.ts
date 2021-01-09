@@ -6,30 +6,27 @@ import {Location} from '@angular/common';
 import {DeparturesService} from '../departures.service';
 
 @Component({
-  selector: 'app-hero-details',
+  selector: 'app-departures',
   templateUrl: './departures.component.html',
   styleUrls: ['./departures.component.css']
 })
 
 export class DeparturesComponent implements OnInit {
-@Input() hero: Stop;
-
+@Input() stop: Stop;
 
   constructor(
-    private heroService: DeparturesService,
+    private departuresService: DeparturesService,
     private route: ActivatedRoute,
-    private location: Location) {
-
-  }
+    private location: Location) {}
 
   ngOnInit(): void {
-    this.getHero();
+    this.getStopDetails();
   }
 
-  getHero(): void {
+  getStopDetails(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.heroService.getHero(id)
-      .subscribe(hero => this.hero = hero);
+    this.departuresService.getStopDetails(id)
+      .subscribe(stop => this.stop = stop);
   }
 
   goBack(): void {

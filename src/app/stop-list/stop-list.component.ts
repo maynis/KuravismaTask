@@ -4,7 +4,7 @@ import {DeparturesService} from '../departures.service';
 import {MessageService} from '../message.service';
 
 @Component({
-  selector: 'app-heroes',
+  selector: 'app-stop-list',
   templateUrl: './stop-list.component.html',
   styleUrls: ['./stop-list.component.css']
 })
@@ -13,17 +13,15 @@ export class StopListComponent implements OnInit {
   constructor(private departuresService: DeparturesService) {
 
   }
+  stops: Stop[];
 
-  heroes: Stop[];
-  selectedHero: Stop;
-
-  getHeroes(): void {
-    this.departuresService.getHeroes()
-    .subscribe(heroes => this.heroes = heroes);
+  getAllStops(): void {
+    this.departuresService.getAllStops()
+    .subscribe(stops => this.stops = stops);
   }
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.getAllStops();
   }
 
 }

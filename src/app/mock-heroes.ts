@@ -1,4 +1,5 @@
 import {Stop} from './Stop';
+import {DepartureElement} from './DepartureElement';
 
 export const STOPS: Stop[] = [
   {
@@ -23,4 +24,26 @@ export const STOPS: Stop[] = [
     type: 'Stop'
   },
 ];
+
+export const DEPARTURES: DepartureElement[] =
+[{
+  id: 'voe:21086: :H:j21',
+  arrivalTime: '2021-01-09T13:55:00.000Z',
+  scheduledTime: '2021-01-09T13:55:00.000Z',
+  line: '86',
+  direction: 'Kreischa',
+  platform: {
+    name: '1', type: 'Platform'
+  },
+  arrivalTimeRelative: 8,
+  scheduledTimeRelative: 8,
+  delayTime: 0,
+  state: 'InTime',
+  mode: {
+    title: 'Bus', name: 'CityBus', iconUrl: 'https://www.dvb.de/assets/img/trans-icon/transport-bus.svg'
+  },
+  diva: {
+    number: 21086, network: 'voe'
+  }
+}];
 

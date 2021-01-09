@@ -5,9 +5,8 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {DeparturesComponent} from './departures/departures.component';
 
 const routes: Routes = [
-  {path: 'heroes', component: StopListComponent},
-  {path: 'dashboard', component: DashboardComponent},
-  {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+  {path: 'stop-list', component: StopListComponent},
+  {path: '', redirectTo: '/stop-list', pathMatch: 'full'},
   {path: 'detail/:id', component: DeparturesComponent}
 ];
 

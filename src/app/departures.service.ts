@@ -11,14 +11,14 @@ export class DeparturesService {
 
   constructor(private messageService: MessageService) { }
 
-  getHeroes(): Observable<Stop[]> {
+  getAllStops(): Observable<Stop[]> {
     this.messageService.add('DeparturesService: fetched stop-list');
     return of(STOPS);
   }
 
-  getHero(id: number): Observable<Stop> {
+  getStopDetails(id: number): Observable<Stop> {
     // TODO: send the message _after_ fetching the hero
     this.messageService.add(`HeroService: fetched hero id=${id}`);
-    return of(STOPS.find(hero => hero.id === id));
+    return of(STOPS.find(stop => stop.id === id));
   }
 }

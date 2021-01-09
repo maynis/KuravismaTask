@@ -5,7 +5,6 @@ export interface DepartureElement {
   line: string;
   direction: string;
   platform: {name: string, type: string};
-  type: string;
   arrivalTimeRelative: number;
   scheduledTimeRelative: number;
   delayTime: number;

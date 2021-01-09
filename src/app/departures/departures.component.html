@@ -1,10 +1,10 @@
-<div *ngIf="hero">
+<div *ngIf="stop">
   <button (click)="goBack()"> < Go Back</button>
-  <h2>{{hero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{hero.id}}</div>
+  <h2>{{stop.name | uppercase}} next departures</h2>
+  <div><span>id: </span>{{stop.id}}</div>
   <div>
     <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name"/>
+      <input [(ngModel)]="stop.name" placeholder="name"/>
     </label>
   </div>
 </div>
