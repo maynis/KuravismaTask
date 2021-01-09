@@ -3,18 +3,26 @@ import {Stop} from './Stop';
 import {STOPS} from './mock-heroes';
 import {Observable, of} from 'rxjs';
 import {MessageService} from './message.service';
+import {HttpClient} from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class DeparturesService {
 
-  constructor(private messageService: MessageService) { }
+  constructor(
+    private messageService: MessageService,
+    private http: HttpClient,
+  ) { }
+
+  private stopsUrl = '/api/search/dd';
+
 
   getAllStops(): Observable<Stop[]> {
-    this.messageService.add('DeparturesService: fetched stop-list');
-    return of(STOPS);
+    return this.http.get<Stop[]>(this.stopsUrl);
   }
+
 
   getStopDetails(id: number): Observable<Stop> {
     // TODO: send the message _after_ fetching the hero

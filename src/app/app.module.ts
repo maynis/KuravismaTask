@@ -7,7 +7,6 @@ import { StopListComponent } from './stop-list/stop-list.component';
 import { DeparturesComponent } from './departures/departures.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -16,7 +15,6 @@ import { HttpClientModule } from '@angular/common/http';
     StopListComponent,
     DeparturesComponent,
     MessagesComponent,
-    DashboardComponent
   ],
   imports: [
     BrowserModule,

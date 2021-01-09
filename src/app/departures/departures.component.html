@@ -1,11 +1,9 @@
 <div *ngIf="stop">
   <button (click)="goBack()"> < Go Back</button>
-  <h2>{{stop.name | uppercase}} next departures</h2>
+  <h2>{{stop.name | uppercase}}: next departures</h2>
   <div><span>id: </span>{{stop.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="stop.name" placeholder="name"/>
-    </label>
-  </div>
+  <div><span>name: </span>{{stop.name}}</div>
+  <div><span>city: </span>{{stop.city}}</div>
+  <div class="departures"></div>
 </div>
 
