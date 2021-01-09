@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { HeroDetailsComponent } from './departures/hero-details.component';
+import { StopListComponent } from './stop-list/stop-list.component';
+import { DeparturesComponent } from './departures/departures.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -13,8 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    HeroDetailsComponent,
+    StopListComponent,
+    DeparturesComponent,
     MessagesComponent,
     DashboardComponent
   ],
