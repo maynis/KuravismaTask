@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Stop} from '../Stop';
 import {DeparturesService} from '../departures.service';
-import {MessageService} from '../message.service';
 
 @Component({
   selector: 'app-stop-list',
@@ -13,15 +12,33 @@ export class StopListComponent implements OnInit {
   constructor(private departuresService: DeparturesService) {
 
   }
-  stops: Stop[];
+  stops: Stop[] = [];
+  stopSelection: Stop[] = [];
 
-  getAllStops(): void {
+  getStops(): void {
     this.departuresService.getAllStops()
-    .subscribe(stops => this.stops = stops);
+    .subscribe(stops => {
+      this.stops = stops;
+      this.getStopSelection(10);
+  });
+  }
+
+  getStopSelection(numOfSelected: number): void {
+    const remainingStops = [...this.stops];
+    this.stopSelection = [];
+    for (let i = 0; i < numOfSelected; i++){
+      const randomIndex = this.getRandomInt(remainingStops.length);
+      this.stopSelection.push(remainingStops[randomIndex]);
+      remainingStops.splice( randomIndex - 1, 1 );
+    }
+  }
+
+  getRandomInt(max: number): number {
+    return Math.floor(Math.random() * Math.floor(max));
   }
 
   ngOnInit(): void {
-    this.getAllStops();
+    this.getStops();
   }
 
 }
