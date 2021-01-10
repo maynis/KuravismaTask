@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import {Stop} from './Stop';
-import {STOPS} from './mock-heroes';
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
 import {MessageService} from './message.service';
 import {HttpClient} from '@angular/common/http';
+import {DepartureElement} from './DepartureElement';
 
 
 @Injectable({
@@ -17,16 +17,17 @@ export class DeparturesService {
   ) { }
 
   private stopsUrl = '/api/search/dd';
-
+  private departuresUrl = `/api/plan/`;
 
   getAllStops(): Observable<Stop[]> {
     return this.http.get<Stop[]>(this.stopsUrl);
   }
 
-
-  getStopDetails(id: number): Observable<Stop> {
+  getDepartures(id: number): Observable<DepartureElement[]> {
     // TODO: send the message _after_ fetching the hero
     this.messageService.add(`HeroService: fetched hero id=${id}`);
-    return of(STOPS.find(stop => stop.id === id));
+    console.log(this.departuresUrl + id);
+    return this.http.get<DepartureElement[]>(this.departuresUrl + id);
   }
+
 }

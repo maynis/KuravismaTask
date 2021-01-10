@@ -4,6 +4,9 @@
   <div><span>id: </span>{{stop.id}}</div>
   <div><span>name: </span>{{stop.name}}</div>
   <div><span>city: </span>{{stop.city}}</div>
-  <div class="departures"></div>
+  <h4>My Departures</h4>
+  <ul *ngIf="departureList">
+    <app-departure *ngFor="let departure of departureList" [departure]=departure class="departures"></app-departure>
+  </ul>
 </div>
 

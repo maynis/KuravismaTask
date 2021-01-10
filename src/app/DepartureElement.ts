@@ -11,6 +11,5 @@ export interface DepartureElement {
   state: string;
   mode: {title: string, name: string, iconUrl: string};
   diva: {number: number, network: string};
-
 }
 
