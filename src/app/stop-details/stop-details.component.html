@@ -2,6 +2,11 @@
   <button (click)="goBack()"> < Go Back</button>
   <h2>{{stop.name | uppercase}}: next departures</h2>
   <ul *ngIf="departureList">
+    <li class="flex-container label">
+      <span class="big-flex-item">line - direction</span>
+      <span class="small-flex-item">departing in</span>
+      <span class="small-flex-item">delay</span>
+    </li>
     <app-departure *ngFor="let departure of departureList" [departure]=departure class="departures"></app-departure>
   </ul>
 </div>

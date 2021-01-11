@@ -1,2 +1,8 @@
 @import '../style/main.css';
 
+.label {
+  font-style: italic;
+  margin: 10px 0;
+  color: var(--highlight2);
+}
+
