@@ -1,4 +1,11 @@
 <li *ngIf="departure" class="flex-container" [ngClass]="{'urgent' : departure.arrivalTimeRelative < 2}">
-  <span>{{departure.line}} {{departure.direction}}</span><br>
-  <span class="small-flex-item">{{departure.arrivalTimeRelative < 1 ? 'fährt ab' : departure.arrivalTimeRelative}}</span>
+  <span class="big-flex-item">
+    {{departure.line}} {{departure.direction}}
+  </span>
+  <span class="small-flex-item">
+    {{departure.arrivalTimeRelative < 1 ? 'fährt ab' : departure.arrivalTimeRelative}}
+  </span>
+  <span class="small-flex-item">
+    {{this.calculateDelay()}}
+  </span>
 </li>

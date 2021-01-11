@@ -1,0 +1,14 @@
+button {
+  margin: 20px;
+  color: var(--color);
+  background: var(--background);
+  padding: 15px;
+  border: 2px solid var(--color);
+  font-family: monospace;
+  font-size: var(--basic-size);
+}
+
+button:hover {
+  color: var(--highlight1);
+  border-color: var(--highlight1);
+}

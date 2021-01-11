@@ -15,4 +15,18 @@ export class DepartureComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  calculateDelay(): string{
+    const delay = this.departure.arrivalTimeRelative - this.departure.scheduledTimeRelative;
+    console.log(delay);
+    if (delay > 0) {
+      return (delay + ' min late');
+    }
+    else if (delay === 0) {
+      return 'in time';
+    }
+    else {
+      return Math.abs(delay) + ' min early';
+    }
+  }
+
 }

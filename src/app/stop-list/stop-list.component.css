@@ -1,2 +1,13 @@
 @import '../style/main.css';
 
+a {
+  color: var(--color);
+}
+
+a:hover {
+  color: var(--highlight2);
+}
+
+ul {
+  list-style: none;
+}

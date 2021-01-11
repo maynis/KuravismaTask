@@ -9,13 +9,29 @@ html {
   --color: #eeeeee;
   --background: #143d52;
   --background2: #143d52;
-
-
 }
 
 * {
   margin: 0;
   padding: 0;
+}
+
+.dark
+{
+  --highlight1: #e34f6d;
+  --highlight2: #88cbc4;
+  --color: #eeeeee;
+  --background: #143d52;
+  --background2: #143d52;
+}
+
+.light
+{
+  --highlight1: #e34f6d;
+  --highlight2: #88cbc4;
+  --color: #143d52;
+  --background: #eeeeee;
+  --background2: #eeeeee;
 }
 
 body {
@@ -37,12 +53,24 @@ body {
 }
 
 .flex-container > * {
-  width: 80%;
+  width: 55%;
+  min-width: 200px;
 }
 
 a {
   text-decoration: none;
+  color: var(--highlight2);
 }
+
+li {
+  transition: 0.5s;
+}
+
+li:hover {
+  border: 1px solid black;
+  font-size: 3em;
+}
+
 
 /*.box-shadow {
   margin-bottom: 10px;

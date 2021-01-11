@@ -1,7 +1,25 @@
-<header><h1>{{title}}</h1></header>
-<section class="flex-container">
-  <div >
-<router-outlet></router-outlet>
+<header>
+  <h1>{{title}}</h1>
+  <!--img (click)="switchTheme()" width="10%" title="switch color theme" alt="lightbulb icon" src="../assets/icons/big-light.svg"/>
+  <img width="10%" title="switch magnifier" alt="magnifier icon" src="../assets/icons/loupe.svg"/-->
+</header>
+<section class="flex-container" [ngClass]="this.IsDarkTheme ? 'dark' : 'light'">
+  <div>
+    <router-outlet></router-outlet>
   </div>
 </section>
+<footer>
+  <div>Icons made by
+    <a
+      rel="noreferrer noopener"
+      target="_blank"
+      href="https://www.flaticon.com/authors/freepik"
+      title="Freepik"
+    >Freepik</a> from <a
+      rel="noreferrer noopener"
+      target="_blank"
+      href="https://www.flaticon.com/"
+      title="Flaticon">www.flaticon.com</a>
+  </div>
+</footer>
 <!--app-messages></app-messages-->

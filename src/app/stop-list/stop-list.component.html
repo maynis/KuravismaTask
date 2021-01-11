@@ -1,9 +1,8 @@
 
-<h2>My Stops</h2>
-<ul class="heroes">
+<h2>10 random stops in Dresden</h2>
+<ul>
   <li *ngFor="let stop of stopSelection">
     <a routerLink="/detail/{{stop.id}}">
-    <span class="badge">{{stop.id}}</span>
     {{stop.name}}
     </a>
   </li>
