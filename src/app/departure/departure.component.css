@@ -4,7 +4,17 @@
 }
 
 .urgent:hover {
+  color: var(--color);
+  border-color: var(--color);
   background: rgba(227, 79, 109, 0.6);
 }
 
-
+@media (max-width: 400px) {
+  li.flex-container {
+    display: block;
+  }
+  li.flex-container > .big-flex-item {
+    display: block;
+    text-align: center;
+  }
+}

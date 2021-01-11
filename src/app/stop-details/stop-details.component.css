@@ -6,3 +6,15 @@
   color: var(--highlight2);
 }
 
+@media (max-width: 400px) {
+  .next_departures {
+    display: none;
+  }
+  .label {
+    display: block;
+  }
+}
+
+.label:hover {
+  border: none;
+}

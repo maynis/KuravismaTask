@@ -3,7 +3,7 @@
     {{departure.line}} {{departure.direction}}
   </span>
   <span class="small-flex-item">
-    {{departure.arrivalTimeRelative < 1 ? 'departing' : departure.arrivalTimeRelative}}
+    {{departure.arrivalTimeRelative < 1 ? 'now' : departure.arrivalTimeRelative}}
   </span>
   <span class="small-flex-item">
     {{this.calculateDelay()}}

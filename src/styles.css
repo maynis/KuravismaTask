@@ -1,9 +1,9 @@
 
 html {
-  --basic-size: 15px;
-  --h-size: 25px;
-  --h2-size: 20px;
-  --h3-size: 15px;
+  --basic-size: 17px;
+  --h-size: 30px;
+  --h2-size: 25px;
+  --h3-size: 20px;
   --highlight1: #e34f6d;
   --highlight2: #88cbc4;
   --color: #eeeeee;
@@ -50,11 +50,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 200px;
 }
 
 .flex-container > * {
-  width: 55%;
+  width: 80%;
   min-width: 200px;
+  max-width: 900px;
 }
 
 a {
@@ -63,12 +65,15 @@ a {
 }
 
 li {
-  transition: 0.5s;
+  padding:  5px 10px;
+  /*transition: 0.5s;*/
 }
 
 li:hover {
-  border: 1px solid black;
-  font-size: 3em;
+  border: 1px solid var(--highlight2);
+  /*font-size: 3em;*/
+  color: var(--highlight2);
+
 }
 
 .big-flex-item {
@@ -79,11 +84,16 @@ li:hover {
   text-align: right;
 }
 
-/*.box-shadow {
-  margin-bottom: 10px;
-  background: var(--highlight2);
-  color: var(--background);
-  box-shadow: 0 2px 2px 0px var(--background);
-  -webkit-box-shadow: 0 2px 2px 0px var(--background);
-}*/
+
+@media (max-width: 800px) {
+  .flex-container > * {
+    min-width: 0;
+  }
+  li.flex-container {
+    flex-direction: row;
+  }
+
+  .big-flex-item {width: 100%;}
+  .flex-container {margin: 0 2%;}
+}
 
