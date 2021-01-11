@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+
+html {
+  --basic-size: 15px;
+  --h-size: 25px;
+  --h2-size: 20px;
+  --h3-size: 15px;
+  --highlight1: #e34f6d;
+  --highlight2: #88cbc4;
+  --color: #eeeeee;
+  --background: #143d52;
+  --background2: #143d52;
+
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--basic-size);
+  color: var(--color);
+  background: var(--background2);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.flex-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container > * {
+  width: 80%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*.box-shadow {
+  margin-bottom: 10px;
+  background: var(--highlight2);
+  color: var(--background);
+  box-shadow: 0 2px 2px 0px var(--background);
+  -webkit-box-shadow: 0 2px 2px 0px var(--background);
+}*/
+

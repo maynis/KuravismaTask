@@ -1,0 +1,21 @@
+li {
+  transition: 0.5s;
+}
+
+li:hover {
+  border: 1px solid black;
+  font-size: 3em;
+}
+
+.urgent {
+  background: rgba(227, 79, 109, 0.4);
+}
+
+.urgent:hover {
+  background: rgba(227, 79, 109, 0.6);
+}
+
+.small-flex-item {
+  width: 30%;
+}
+

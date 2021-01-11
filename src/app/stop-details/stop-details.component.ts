@@ -7,7 +7,7 @@ import {DeparturesService} from '../departures.service';
 import {DepartureElement} from '../DepartureElement';
 
 @Component({
-  selector: 'app-departures',
+  selector: 'app-stop-details',
   templateUrl: './stop-details.component.html',
   styleUrls: ['./stop-details.component.css']
 })

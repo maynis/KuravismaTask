@@ -1,10 +1,10 @@
-<div *ngIf="stop">
+<div *ngIf="stop" class="flex-element">
   <button (click)="goBack()"> < Go Back</button>
   <h2>{{stop.name | uppercase}}: next departures</h2>
   <div><span>id: </span>{{stop.id}}</div>
   <div><span>name: </span>{{stop.name}}</div>
   <div><span>city: </span>{{stop.city}}</div>
-  <h4>My Departures</h4>
+  <h3>My Departures</h3>
   <ul *ngIf="departureList">
     <app-departure *ngFor="let departure of departureList" [departure]=departure class="departures"></app-departure>
   </ul>

@@ -1,0 +1,27 @@
+h1,h2,h3,h4 {
+  box-sizing: border-box;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 40px 0 10px 0;
+  font-weight: bold;
+  font-size: var(--h-size);
+  color: var(--highlight1);
+  white-space: nowrap;
+  text-underline-style: none;
+}
+
+h1 {
+  padding: 40px 0 40px 0;
+}
+
+h3 {
+  font-size: var(--h3-size);
+  color: var(--color);
+}
+
+h2 {
+  font-size: var(--h2-size);
+  color: var(--highlight2);
+}
