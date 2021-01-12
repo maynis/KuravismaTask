@@ -2,7 +2,7 @@
 @import './style/main.css';
 
 footer {
-  padding: 50px 0 50px 0;
+  padding: 50px 0;
   position: absolute;
   bottom: 0;
   width: 100%;

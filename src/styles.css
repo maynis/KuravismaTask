@@ -99,3 +99,17 @@ li:hover:not(.label) {
     display: block;
   }
 }
+
+/*error messages are faded in after 3s*/
+.error {
+  opacity: 0;
+  padding: 50px 0;
+  animation: fadeIn 3s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

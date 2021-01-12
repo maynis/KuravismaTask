@@ -1,10 +1,13 @@
 <h2>10 <span class="del_on_narrow_screen">random</span> DVB stops <span class="br_on_narrow_screen">in Dresden</span>
 </h2>
-<ul>
+<ul *ngIf="stopSelection">
   <!-- stop list, links to stop detail view-->
     <li *ngFor="let stop of stopSelection" routerLink="/detail/{{stop.id}}">
       {{stop.name}}
     </li>
 </ul>
+<!-- error message in case apo is not available -->
+<div *ngIf="!stopSelection" class="error">A problem occurred while fetching the data. Please make sure the backend server is running and try again.</div>
+
 <button (click)="getStopSelection(10)"> Get 10 new Stops</button>
 
