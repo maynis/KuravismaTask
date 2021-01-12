@@ -1,4 +1,4 @@
-<li *ngIf="departure" class="flex-container" [ngClass]="{'urgent' : departure.arrivalTimeRelative < 2}">
+<li *ngIf="departure" class="flex-container br_on_narrow_screen" [ngClass]="{'urgent' : departure.arrivalTimeRelative < 2}">
   <span class="big-flex-item">
     {{departure.line}} {{departure.direction}}
   </span>

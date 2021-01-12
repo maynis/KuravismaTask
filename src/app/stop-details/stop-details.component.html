@@ -1,7 +1,11 @@
 <div *ngIf="stop" class="flex-element">
-  <h2><span>{{stop.name | uppercase}}</span><span class="next_departures">: next departures</span></h2>
+  <h2>{{stop.name | uppercase}}
+    <span class="del_on_narrow_screen">:
+      <span class="br_on_medium_screen">next departures</span>
+    </span>
+  </h2>
   <ul *ngIf="departureList">
-    <li class="flex-container label">
+    <li class="flex-container label br_on_narrow_screen">
       <span>line - direction</span>
       <div>
         <span class="small-flex-item">departing in</span>
