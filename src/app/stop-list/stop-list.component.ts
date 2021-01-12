@@ -23,6 +23,7 @@ export class StopListComponent implements OnInit {
   });
   }
 
+  // randomly select a number of stops in Dresden
   getStopSelection(numOfSelected: number): void {
     const remainingStops = [...this.stops];
     this.stopSelection = [];

@@ -10,9 +10,14 @@
       <span class="small-flex-item">departing in</span>
       <span class="small-flex-item">delay</span>
     </li>
-    <app-departure *ngFor="let departure of departureList" [departure]=departure class="departures"></app-departure>
+    <app-departure
+      *ngFor="let departure of departureList"
+      [departure]=departure class="departures"
+    ></app-departure>
   </ul>
-  <div class="error" *ngIf="!departureList">A problem occurred while fetching the data. Please make sure the backend server is running and try again.</div>
+  <div class="error" *ngIf="!departureList">
+    A problem occurred while fetching the data. Please make sure the backend server is running and try again.
+  </div>
   <button (click)="goBack()"> < Go Back</button>
 </div>
 

@@ -1,4 +1,6 @@
-@import '../style/main.css';
+@import '../style/headlines.css';
+@import '../style/buttons.css';
+
 
 .label {
   font-style: italic;
@@ -12,5 +14,3 @@
   }
 }
 
-.label:hover {
-}

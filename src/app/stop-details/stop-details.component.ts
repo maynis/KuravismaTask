@@ -42,10 +42,10 @@ export class StopDetailsComponent implements OnInit {
   getStopByID(id: number): void {
     this.departuresService.getAllStops()
       .subscribe(stops => {
+        // search for the stop with the right id and saving it
         stops.forEach(stop => {
             if (stop.id.toString() === id.toString()) {
               this.stop = stop;
-              console.log(stop);
             }
           }
         );
