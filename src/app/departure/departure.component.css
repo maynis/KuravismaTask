@@ -1,4 +1,5 @@
 
+
 .urgent {
   background: rgba(227, 79, 109, 0.4);
 }
@@ -7,6 +8,10 @@
   color: var(--color);
   border-color: var(--color);
   background: rgba(227, 79, 109, 0.6);
+}
+
+li:hover {
+  color: var(--color);
 }
 
 @media (max-width: 400px) {

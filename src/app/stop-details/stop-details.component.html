@@ -6,11 +6,9 @@
   </h2>
   <ul *ngIf="departureList">
     <li class="flex-container label br_on_narrow_screen">
-      <span>line - direction</span>
-      <div>
-        <span class="small-flex-item">departing in</span>
+      <span class="line-direction br_on_narrow_screen">line - direction</span>
+      <span class="small-flex-item">departing in</span>
       <span class="small-flex-item">delay</span>
-      </div>
     </li>
     <app-departure *ngFor="let departure of departureList" [departure]=departure class="departures"></app-departure>
   </ul>

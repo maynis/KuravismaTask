@@ -17,7 +17,6 @@ export class DepartureComponent implements OnInit {
 
   calculateDelay(): string{
     const delay = this.departure.arrivalTimeRelative - this.departure.scheduledTimeRelative;
-    console.log(delay);
     if (delay > 0) {
       return (delay + ' min late');
     }

@@ -1,11 +1,10 @@
-
-<h2>10 <span class="del_on_narrow_screen">random</span> DVB stops <span class="br_on_narrow_screen">in Dresden</span></h2>
+<h2>10 <span class="del_on_narrow_screen">random</span> DVB stops <span class="br_on_narrow_screen">in Dresden</span>
+</h2>
 <ul>
-  <li *ngFor="let stop of stopSelection">
-    <a routerLink="/detail/{{stop.id}}">
-    {{stop.name}}
-    </a>
-  </li>
+  <!-- stop list, links to stop detail view-->
+    <li *ngFor="let stop of stopSelection" routerLink="/detail/{{stop.id}}">
+      {{stop.name}}
+    </li>
 </ul>
 <button (click)="getStopSelection(10)"> Get 10 new Stops</button>
 

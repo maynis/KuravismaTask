@@ -17,22 +17,6 @@ html {
   padding: 0;
 }
 
-.dark {
-  --highlight1: #e34f6d;
-  --highlight2: #88cbc4;
-  --color: #eeeeee;
-  --background: #143d52;
-  --background2: #143d52;
-}
-
-.light {
-  --highlight1: #e34f6d;
-  --highlight2: #88cbc4;
-  --color: #143d52;
-  --background: #eeeeee;
-  --background2: #eeeeee;
-}
-
 body {
   font-family: monospace;
   -webkit-font-smoothing: antialiased;
@@ -69,20 +53,21 @@ li {
   /*transition: 0.5s;*/
 }
 
-li:hover {
+li:hover:not(.label) {
   border: 1px solid var(--highlight2);
   /*font-size: 3em;*/
   color: var(--highlight2);
 
 }
 
-.big-flex-item {
+.line-direction {
   text-align: left;
 }
 
 .small-flex-item {
   width: 30%;
   text-align: right;
+  margin: 0 10px;
 }
 
 
